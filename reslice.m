@@ -1,9 +1,8 @@
 % ----------------- User Settings -----------------
-main_folder = 'Z:\People\JohnS\SCanD\SemanticAssociation_fmriPrep_fMRI-CPCA\Data_Resliced\Patients';   % <-- CHANGE THIS
+main_folder = 'Z:\People\JohnS\SemanticAssociation_fmriPrep_fMRI-CPCA\Data';   % Location of your data to be resliced
 output_prefix = 'r_';                       % Prefix for resliced images
-spm_path = 'Z:\Manuals and Scripts\MRI\All_fMRI_Steps\Preprocessing with SPM12\spm_25.01.02\spm';            % <-- CHANGE THIS
-
-reference_scan = 'Z:\People\JohnS\SCanD\SemanticAssociation_fmriPrep_fMRI-CPCA\C1_varimax_G.hdr';  % <-- Your reference scan with desired voxel size
+spm_path = 'Z:\Manuals and Scripts\MRI\All_fMRI_Steps\Preprocessing with SPM12\spm_25.01.02\spm';            % Path to spm folder
+reference_scan = 'Z:\People\JohnS\SemanticAssociation_fmriPrep_fMRI-CPCA\mask_used.hdr';  % <-- Path to the reference scan with desired voxel size and dimensions
 % --------------------------------------------------
 
 addpath(spm_path);
@@ -44,3 +43,4 @@ for i = 1:length(subject_dirs)
 end
 
 disp('All volumes resliced to external reference.');
+
