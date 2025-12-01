@@ -37,5 +37,18 @@ Before running the script, please modify the following input parameters in the `
 
 `line 2`: Paste the path to your `data` folder with the scans that are to be resliced. Eg. `main_folder = 'Z:\People\JohnS\SemanticAssociation_fmriPrep_fMRI-CPCA\Data';`
 
-`line 3`: If you would like a different prefix added to the resliced scans
+`line 3`: If you would like a different prefix added to the resliced scans, then you may modify this line. The default setting is for the resliced scans to have a prefix of `r_`, but you may modify this. Eg. `output_prefix = 'resliced_';` if you would like the prefix to be `resliced_` for all the resliced scans.
 
+`line 4`: Paste the path to the SPM software folder.
+
+`line 5`: Paste the path to the reference scan with the desired voxel size and image dimensions. Eg. `reference_scan = 'Z:\People\JohnS\SemanticAssociation_fmriPrep_fMRI-CPCA\mask_used.hdr';` if your reference scan hdr/img pair is named `mask_used`.
+
+`line 17`: This line should only be modified if your scans to be resliced do not follow the naming convention of `sub*.nii`. Eg. If your scans to be resliced contain the naming convention of A*.nii (`A01_scan01.nii`, `A01_scan02.nii`, etc), then you should modify this line to the following: `nii_files = dir(fullfile(subj_path, 'A*.nii'));`
+
+## After Running the Script
+
+The resliced scans will be placed in each subjects corresponding folder within the main `data` folder. The original scans will be preserved.
+
+# Version Information
+
+Version: 27August_2025
